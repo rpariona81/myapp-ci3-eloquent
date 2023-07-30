@@ -116,6 +116,7 @@ $capsule->addConnection([
     'prefix' => $db['default']['dbprefix'],
 ]);
 
+//https://notes.enovision.net/codeigniter/eloquent-in-codeigniter/install-eloquent-with-composer
 // Event dispatcher, not required, but very handy
 $capsule->setEventDispatcher(new Dispatcher(new Container())); 
 

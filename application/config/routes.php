@@ -54,4 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['test'] = 'testcontroller/index';
+$route['test/data'] = 'testcontroller/data';
 

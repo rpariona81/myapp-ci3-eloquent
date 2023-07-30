@@ -12,7 +12,16 @@ class TestController extends CI_Controller
     public function index()
     {
         //echo 'Hola mundo';
+        //$data['query'] = $this->Career_model->getListCareers();
+        //echo json_encode($data);
+        $this->load->view('hometest');
+    }
+
+    public function data()
+    {
+        //echo 'Hola mundo';
         $data['query'] = $this->Career_model->getListCareers();
         echo json_encode($data);
+        //$this->load->view('hometest',$data);
     }
 }

@@ -11,7 +11,7 @@ class Test extends BaseModel
      *
      * @var string
      */
-    protected $table = 't_offersjob';
+    protected $table = 't_entidades';
     
     /**
      * The attributes that are mass assignable.
@@ -19,11 +19,14 @@ class Test extends BaseModel
      * @var array<int, string>
      */
     protected $fillable = [
-        'career_title',
-        'career_code',
-        'career_alias',
-        'career_related',
-        'career_notes'
+        'region_id',
+        'codentidad',
+        'entidad',
+        'titulo_entidad',
+        'codtipoentidad',
+        'codgestionentidad',
+        'estado',
+        'flag_visible'
     ];
 
     /**
