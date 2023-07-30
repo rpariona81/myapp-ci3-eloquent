@@ -1,4 +1,7 @@
 <?php
+
+use Illuminate\Support\Facades\Response;
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class TestController extends CI_Controller
@@ -22,6 +25,8 @@ class TestController extends CI_Controller
         //echo 'Hola mundo';
         $data['query'] = $this->Career_model->getListCareers();
         echo json_encode($data);
+        //return $data;
+        //return $this->output->set_content_type('application/json')->set_output(json_encode($data));
         //$this->load->view('hometest',$data);
     }
 }

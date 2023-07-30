@@ -25,5 +25,6 @@ class Career_model extends CI_Model
         //$listCareers = 'rrrrrrrrrr';
         $listCareers = CareerEloquent::all();
         return $listCareers;
+        //return json_encode($listCareers);
     }
 }
