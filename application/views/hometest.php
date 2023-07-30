@@ -398,7 +398,7 @@
             // https://datatables.net/reference/button/excelHtml5
             $("#example").DataTable({
                 ajax: {
-                    url: 'http://localhost:3000/test/data',
+                    url: '<?=base_url('test/data')?>',
                     dataSrc: 'query',
                     type: 'GET'
                 },
