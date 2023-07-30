@@ -11,7 +11,7 @@
 		"source": "https://github.com/bcit-ci/CodeIgniter"
 	},
 	"require": {
-		"php": ">=5.6.0",
+		"php": ">=7.0",
 		"illuminate/database": "^7",
 		"illuminate/events": "^7",
 		"illuminate/contracts": "^7",
@@ -42,7 +42,7 @@
 	"autoload": {
 		"psr-4": {
 		  "App\\": "",
-		  "Db\\": "database/"
+		  "Db\\": "application/eloquent/"
 		}
 	  }
 }

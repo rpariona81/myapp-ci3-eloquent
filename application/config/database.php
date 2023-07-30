@@ -70,23 +70,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
+
+use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Events\Dispatcher;
+use Illuminate\Container\Container;
+
 $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
-	'dbdriver' => 'mysqli',
+	'dsn' => getenv('DB_DSN') ?? '',
+    'hostname' => getenv('DB_HOST') ?? '',
+    'port' => getenv('DB_PORT') ?? '',
+    'username' => getenv('DB_USERNAME') ?? '',
+    'password' => getenv('DB_PASSWORD') ?? '',
+    'database' => getenv('DB_DATABASE') ?? '',
+    'dbdriver' => getenv('DB_DRIVER') ?? '',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
+	'char_set' => 'utf8mb4',
+	'dbcollat' => 'utf8mb4_unicode_ci',
 	'swap_pre' => '',
 	'encrypt' => FALSE,
 	'compress' => FALSE,
@@ -94,3 +100,27 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+$capsule = new Capsule;
+$capsule->addConnection([
+    //'driver'    => 'sqlite',
+    //'driver'    => 'sqlsrv',
+    //'driver'    => 'mysql',
+    'driver' => getenv('DB_CONNECTION'),
+    'host' => $db['default']['hostname'],
+    'database' => $db['default']['database'],
+    'username' => $db['default']['username'],
+    'password' => $db['default']['password'],
+    'charset' => $db['default']['char_set'],
+    'collation' => $db['default']['dbcollat'],
+    'prefix' => $db['default']['dbprefix'],
+]);
+
+// Event dispatcher, not required, but very handy
+$capsule->setEventDispatcher(new Dispatcher(new Container())); 
+
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
+
+// Query logging, you can also commented it out, when you don't need it
+$capsule->connection()->enableQueryLog();
