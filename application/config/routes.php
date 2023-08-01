@@ -55,4 +55,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['test'] = 'testcontroller/index';
 $route['test/data'] = 'testcontroller/data';
+$route['test/table'] = 'testcontroller/table';
+$route['test/login'] = 'testcontroller/login';
 
