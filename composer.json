@@ -41,8 +41,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-		  "App\\": "",
-		  "Db\\": "application/eloquent/"
+		  "App\\": "app",
+		  "Db\\": "app/eloquent/"
 		}
 	  }
 }
