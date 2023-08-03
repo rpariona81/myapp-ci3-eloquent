@@ -57,4 +57,8 @@ $route['test'] = 'testcontroller/index';
 $route['test/data'] = 'testcontroller/data';
 $route['test/table'] = 'testcontroller/table';
 $route['test/login'] = 'testcontroller/login';
+$route['test/list'] = 'testcontroller/list';
+
+$route['test/new'] = 'testcontroller/nueva_entidad';
+
 

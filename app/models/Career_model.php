@@ -1,5 +1,6 @@
 <?php
-if (!defined('BASEPATH')) exit('No direct script access allowed');
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
 
 use Db\Test as CareerEloquent;
 
@@ -20,11 +21,33 @@ class Career_model extends CI_Model
 
     }
 
-    public function getListCareers()
+    public function get_all()
     {
-        //$listCareers = 'rrrrrrrrrr';
-        $listCareers = CareerEloquent::all();
-        return $listCareers;
+        $lista = CareerEloquent::all();
+        return $lista;
         //return json_encode($listCareers);
     }
+
+    /*
+    Store the record in the database
+    */
+    public function store($request)
+    {
+        $data = array(
+            'region_id' => $request->region_id,
+            'codentidad' => $request->codentidad,
+            'entidad' => $request->entidad,
+            'titulo_entidad' => $request->titulo_entidad,
+            'codtipoentidad' => $request->codtipoentidad,
+            'codgestionentidad' => $request->codgestionentidad,
+            'estado' => $request->estado,
+            'flag_visible' => $request->flag_visible,
+            'flag_formulario' => $request->flag_formulario
+        );
+
+        $model = new CareerEloquent();
+        $model->fill($data);
+        $model->save($data);
+    }
+
 }

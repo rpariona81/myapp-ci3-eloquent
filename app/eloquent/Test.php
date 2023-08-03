@@ -35,7 +35,7 @@ class Test extends BaseModel
      * @var array<int, string>
      */
     protected $hidden = [
-
+        'id'
     ];
 
     /**

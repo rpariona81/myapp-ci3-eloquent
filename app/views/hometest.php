@@ -404,10 +404,10 @@
                 },
                 "columns": [
                     {
-						"data": "id"
+						"data": "region_id"
 					},
 					{
-						"data": "region_id"
+						"data": "codgestionentidad"
 					},
 					{
 						"data": "codentidad"
