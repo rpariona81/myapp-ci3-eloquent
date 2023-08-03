@@ -423,7 +423,7 @@
             var mytable = $("#example").DataTable({
                 deferRender: true,
                 responsive: true,
-                pageLength: 10,
+                pageLength: 5,
                 lengthMenu: [ 5, 10, 25, 50 ],
                 scrollH: true,
                 scrollX: true,
@@ -436,7 +436,18 @@
 
             new $.fn.dataTable.Buttons( mytable , {
                 buttons: [
-                    'copy', 'excel', 'pdf'
+                    'copy', 'pdf', 
+                    {
+                        extend: 'excelHtml5',
+                        text: 'Excel',
+                        customize: function(xlsx) {
+                        var sheet = xlsx.xl.worksheets['sheet1.xml'];
+                        //Para ver los estilos de formato https://datatables.net/reference/button/excelHtml5
+                        $('row c[r^="B"]', sheet).attr('s', '57');
+                        //Para que la columna se muestre como texto https://datatables.net/forums/discussion/73814/export-to-excel-with-format-text-for-column-b-c-and-d
+                        $('row c[r^="C"]', sheet).attr('s', '50');
+                        }
+                    }
                 ]
             });
 
