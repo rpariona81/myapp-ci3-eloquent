@@ -28,6 +28,13 @@ class Career_model extends CI_Model
         //return json_encode($listCareers);
     }
 
+    public function get_select($id)
+    {
+        $select = CareerEloquent::findOrFail($id)->first();
+        return $select;
+        //return json_encode($listCareers);
+    }
+
     /*
     Store the record in the database
     */

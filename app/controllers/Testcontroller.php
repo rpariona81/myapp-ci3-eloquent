@@ -15,7 +15,8 @@ class TestController extends CI_Controller
         //echo 'Hola mundo';
         //$data['query'] = $this->Career_model->get_all();
         //echo json_encode($data);
-        $this->load->view('hometest');
+        $this->load->view('index');
+        //$this->load->view('hometest');
     }
 
     public function login()

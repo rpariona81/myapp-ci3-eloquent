@@ -61,4 +61,4 @@ $route['test/list'] = 'testcontroller/list';
 
 $route['test/new'] = 'testcontroller/nueva_entidad';
 
-
+$route['api/demo'] = 'api/ApiDemoController/index';
