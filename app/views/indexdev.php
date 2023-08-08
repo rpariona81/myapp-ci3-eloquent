@@ -32,50 +32,66 @@
             </button>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#header-section">Inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#header-section">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#feedback-section">Preguntas frecuentes</a>
+            <a class="nav-link" href="#features-section">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#digital-marketing-section">Blog</a>  
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#feedback-section">Testimonials</a>
           </li>
           <li class="nav-item btn-contact-us pl-4 pl-lg-0">
-            <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Contacto</button>
+            <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Contact Us</button>
           </li>
         </ul>
       </div>
     </div> 
     </nav>   
   </header>
-  
+  <div class="banner" >
+    <div class="container">
+      <h1 class="font-weight-semibold">Search engine optimisation &<br>Marketing.</h1>
+      <h6 class="font-weight-normal text-muted pb-3">Simple is a simple template with a creative design that solves all your marketing and SEO queries.</h6>
+      <div>
+        <button class="btn btn-opacity-light mr-1">Get started</button>
+        <button class="btn btn-opacity-success ml-1">Learn more</button>
+      </div>
+      <img src="<?=base_url('assets/images/Group171.svg')?>" alt="" class="img-fluid">
+    </div>
+  </div>
   <div class="content-wrapper">
     <div class="container">
       <section class="features-overview" id="features-section" >
         <div class="content-header">
-          <h2 class="font-weight-semibold">Ingreso al sistema de bolsa laboral</h2>
+          <h2>How does it works</h2>
+          <h6 class="section-subtitle text-muted">One theme that serves as an easy-to-use operational toolkit<br>that meets customer's needs.</h6>
         </div>
         <div class="d-md-flex justify-content-between">
           <div class="grid-margin d-flex justify-content-start">
             <div class="features-width">
-              <img src="<?=base_url('assets/images/estudiante.png')?>" alt="" class="img-icons" width="200" height="200">
-              <br><br>
-              <p>
-                <a class="btn btn-large btn-info btn-block" href="/wp-admin">Estudiantes/egresados</a>
-              </p>
+              <img src="<?=base_url('assets/images/Group12.svg')?>" alt="" class="img-icons">
+              <h5 class="py-3">Speed<br>Optimisation</h5>
+              <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+              <a href="#"><p class="readmore-link">Readmore</p></a>  
             </div>
           </div>
           <div class="grid-margin d-flex justify-content-center">
             <div class="features-width">
-              <img src="<?=base_url('assets/images/instructor.png')?>" alt="" class="img-icons" width="200" height="200">
-              <br><br><p>
-              <a class="btn btn-large btn-warning btn-block" href="/wp-admin">Docentes</a>
-              </p>
+              <img src="<?=base_url('assets/images/Group7.svg')?>" alt="" class="img-icons">
+              <h5 class="py-3">SEO and<br>Backlinks</h5>
+              <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+              <a href="#"><p class="readmore-link">Readmore</p></a>
             </div>
           </div>
           <div class="grid-margin d-flex justify-content-end">
             <div class="features-width">
-              <img src="<?=base_url('assets/images/admin2.png')?>" alt="" class="img-icons" width="200" height="200">
-              <br><br><p>
-              <a class="btn btn-large btn-success btn-block" href="/wp-admin">Administrador</a>
-              </p>
+              <img src="<?=base_url('assets/images/Group5.svg')?>" alt="" class="img-icons">
+              <h5 class="py-3">Content<br>Marketing</h5>
+              <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+              <a href="#"><p class="readmore-link">Readmore</p></a>
             </div>
           </div>
         </div>

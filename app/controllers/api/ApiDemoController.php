@@ -49,4 +49,45 @@ class ApiDemoController extends RestController {
         $this->response($res, 200);  
  
     }
+
+    public function storeCareer_post()
+    {
+        //echo 'Welcome to API';
+        $request = $this->input->post();
+        $region_id = $this->input->post('region_id',TRUE);
+        $codentidad = $this->input->post('codentidad',TRUE);
+        $entidad = $this->input->post('entidad',TRUE);
+        $titulo_entidad = $this->input->post('titulo_entidad',TRUE);
+        $codtipoentidad = $this->input->post('codtipoentidad',TRUE);
+        $codgestionentidad = $this->input->post('codgestionentidad',TRUE);
+        $estado = $this->input->post('estado',TRUE);
+        $flag_visible = $this->input->post('flag_visible',TRUE);
+
+        if(!empty($request)) {
+            $data = $this->Career_model->store($id);
+            if($data) {
+                $res['error'] = false;
+                $res['message'] = 'success get data by id';
+                $res['data'] = $data;    
+                
+            }else {
+                $res['error'] = true;
+                $res['message'] = 'failed get data';
+            }
+        }else{
+            $data = $this->Career_model->get_all();
+            if($data) {
+                $res['error'] = false;
+                $res['message'] = 'success get all data';
+                $res['data'] = $data;
+
+            } else {
+                $res['error'] = true;
+                $res['message'] = 'failed get data';
+            }
+        }
+        
+        $this->response($res, 200);  
+ 
+    }
 }

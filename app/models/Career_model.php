@@ -2,7 +2,9 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
+use Illuminate\Support\Facades\Request;
 use Db\Test as CareerEloquent;
+use Illuminate\Support\Facades\Validator;
 
 //https://notes.enovision.net/codeigniter/eloquent-in-codeigniter/how-to-use-the-models
 
