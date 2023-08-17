@@ -37,9 +37,16 @@
           <li class="nav-item">
             <a class="nav-link" href="#feedback-section">Preguntas frecuentes</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item" style="margin-left: 0.9rem; white-space: nowrap;">
+            <a href="#" class="btn btn-primary text-inverse">Soy empleador</a>
+          </li>
           <li class="nav-item btn-contact-us pl-4 pl-lg-0">
             <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Contacto</button>
           </li>
+          
         </ul>
       </div>
     </div> 
